@@ -3,7 +3,7 @@ Here are some of my personal notes on Tao Zhexuan Real Analysis, updated from ti
 
 Also, the documentation is edited using `Typora`, some of the interlinear formulas and colors can no longer be displayed in `GitHub`, you can download the documentation and view it in `Typora`. The project provides a zip download of the entire folder, please do not move the files relative to each other (some note skipping is required):cry:
 
-At present, the progress is updated, notes to section 6.2 and exercises to section 4.1。:flushed:
+At present, the progress is updated, notes to section 8.2 and exercises to section 4.2。:flushed:
 
 ---
 
@@ -11,4 +11,4 @@ At present, the progress is updated, notes to section 6.2 and exercises to secti
 
 另外，文档使用`Typora`编辑，部分行间公式与颜色不能再`GitHub`中显示，您可以下载文档后在`Typora`中查看。项目提供整个文件夹的压缩包下载，请不要乱动文件相对位置（有些笔记跳转需要）:cry:
 
-目前更新进度，笔记到6.2节，习题到4.1节。:flushed:
+目前更新进度，笔记到8.2节，习题到4.2节。:flushed:
