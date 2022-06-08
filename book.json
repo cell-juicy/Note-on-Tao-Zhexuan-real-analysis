@@ -1,0 +1,59 @@
+{
+    "title": "陶哲轩实分析笔记",
+    "author": "L",
+    "description" : "记录实分析学习的要点与个人习题解答",
+    "language":"zh-hans",
+    "link":
+    {
+        "sidebar" :
+        {
+        "GitHub" : "https://github.com/Cell1344/Note-on-Tao-Zhexuan-real-analysis"
+        }
+    },
+    "structure":{
+        "readme":"README.md",
+        "summary":"SUMMARY.md"
+    },
+    "plugins":
+    [
+        "mathjax-pro",
+        "advanced-emoji",
+        "-lunr",
+        "-search",
+        "search-pro",
+        "chapter-fold",
+        "expandable-chapters",
+        "back-to-top-button",
+        "code",
+        "-sharing",
+        "sharing-plus",
+        "disqus"
+    ],
+    "pluginsConfig":
+    {
+        "sharing": 
+        {
+            "douban": false,
+            "facebook": false,
+            "google": true,
+            "pocket": false,
+            "qq": false,
+            "qzone": true,
+            "twitter": false,
+            "weibo": true,
+            "all": 
+            [
+                "douban", "facebook", "google", "instapaper", "linkedin","twitter", "weibo", 
+                "messenger","qq", "qzone","viber","whatsapp"
+            ]
+       },
+       "disqus": 
+       {
+        "shortName": "webpack-handbook"
+       },
+       "mathjax-pro":
+       {
+        "version": "2.7.6"
+        }
+    }
+}
