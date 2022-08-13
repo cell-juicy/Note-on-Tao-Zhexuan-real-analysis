@@ -17,4 +17,4 @@ At present, the progress is updated, notes to section 8.5 and exercises to secti
 
 同时在这里我要感谢我的合作者：[@Homological-algebra](https://github.com/Homological-algebra)，他也为本篇笔记的完成提供了很多帮助。关于习题答案的话，还有一个大佬自己站点的资料也非常不错，如果有兴趣也可以前往参考：[Analysis [Tenrece Tao] (3rd Ed)](https://christangdt.home.blog/analysis/analysis-tenrece-tao-3rd-ed/)。
 
-目前更新进度，笔记到8.5节，习题到6.3节。:flushed:
+目前更新进度，笔记到9.5节，习题到6.7节。:flushed:
