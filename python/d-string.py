@@ -6,7 +6,11 @@ from pyperclip import copy
 
 # 实分析笔记用这个快速转换跳转超链接
 def md2pdf(post):  # sourcery skip: use-getitem-for-re-match-groups
-    _name = re.search(r'实分析 (\d{1,2}\.\d{1,2} .*?)\.md', post).group(1)
+    _p = re.compile(r'实分析 (\d{1,2}\.\d{1,2} .*?)\.md')
+    if _p.search(post) is not None:
+        _name = _p.search(post).group(1)
+    else:
+        _name = ' 额外注释 '
     with open(post, 'r', encoding='utf-8') as _f:
         _s = _f.read()
     if _s.find(r'\md') == -1:
@@ -111,7 +115,7 @@ def make_summary():
 
 
 if __name__ == '__main__':
-    p = r'E:\学习\导出文件汇总\Typora\笔记\实分析\第9章\md\实分析 9.10 在无限处的极限.md'
-    # md2pdf(p)
-    get_url(p)
+    p = r'E:\学习\导出文件汇总\Typora\笔记\实分析\额外注释\md\额外注释.md'
+    md2pdf(p)
+    # get_url(p)
     # make_summary()
