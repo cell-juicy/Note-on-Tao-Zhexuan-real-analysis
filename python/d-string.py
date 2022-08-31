@@ -23,7 +23,7 @@ def md2pdf(post):  # sourcery skip: use-getitem-for-re-match-groups
         _st = 'pdf'
     with open(post, 'w', encoding='utf-8') as _f:
         _f.write(_s)
-    print(f'成功转换{_name}为全{_st}')
+    print(f'成功转换 {_name} 中跳转链接为指向{_st}')
 
 
 # 快速获取跳转超链接,注意要在跳转链接全是md时使用
@@ -106,8 +106,6 @@ def make_summary():
             # 当章节序号大于写到的题目而小于笔记的章节时，标记为[ ]
             elif get_num(_j)[0] <= _goal[0]:
                 _s += f'\n  * [ ] [{_sec}]({_pat})'
-            else:
-                pass
     # 写入文件，然后输出消息提示运行结束
     with open(_summary_path, 'w', encoding='utf-8') as _f:
         _f.write(_s)
@@ -115,7 +113,7 @@ def make_summary():
 
 
 if __name__ == '__main__':
-    p = r'E:\学习\导出文件汇总\Typora\笔记\实分析\额外注释\md\额外注释.md'
-    md2pdf(p)
+    p = r'E:\学习\导出文件汇总\Typora\笔记\实分析\第7章\md\实分析 7.5 根值判别法与比值判别法.md'
+    # md2pdf(p)
     # get_url(p)
-    # make_summary()
+    make_summary()
