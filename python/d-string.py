@@ -113,7 +113,7 @@ def make_summary():
 
 
 if __name__ == '__main__':
-    p = r'E:\学习\导出文件汇总\Typora\笔记\实分析\第7章\md\实分析 7.5 根值判别法与比值判别法.md'
+    p = r'E:\学习\导出文件汇总\Typora\笔记\实分析\第8章\md\实分析 8.1 可数性.md'
     # md2pdf(p)
-    # get_url(p)
-    make_summary()
+    get_url(p)
+    # make_summary()
