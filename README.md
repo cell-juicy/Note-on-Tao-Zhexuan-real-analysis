@@ -6,7 +6,7 @@ Also, the documentation is edited using `Typora`, some of the interlinear formul
 
 I would also like to thank my collaborator: [@Homological-algebra](https://github.com/Homological-algebra), who also provided a lot of help in the completion of this note. As for the answers to the exercises, there is a big brother's own site information is also very good, if interested can also go to the reference: [Analysis[Tenrece Tao] (3rd Ed)](https://christangdt.home.blog/analysis/analysis-tenrece-tao -3rd-ed/)。
 
-At present, the progress is updated, notes to section 9.10 and exercises to section 9.1。:flushed:
+At present, the progress is updated, notes to section 9.10 and exercises to section 9.6。:flushed:
 
 ---
 
@@ -17,4 +17,4 @@ At present, the progress is updated, notes to section 9.10 and exercises to sect
 
 同时在这里我要感谢我的合作者：[@Homological-algebra](https://github.com/Homological-algebra)，他也为本篇笔记的完成提供了很多帮助。关于习题答案的话，还有一个大佬自己站点的资料也非常不错，如果有兴趣也可以前往参考：[Analysis [Tenrece Tao] (3rd Ed)](https://christangdt.home.blog/analysis/analysis-tenrece-tao-3rd-ed/)。
 
-目前更新进度，笔记到9.10节，习题到9.1节。:flushed:
+目前更新进度，笔记到9.10节，习题到9.6节。:flushed:
