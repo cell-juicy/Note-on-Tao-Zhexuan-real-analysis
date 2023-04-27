@@ -6,6 +6,31 @@ from typing import Callable, Union
 from functools import partial
 import json
 import datetime
+import markdown
+import shutil
+
+
+SECTION_NAME = [
+    r'第1章 引言',
+    r'第2章 从头开始：自然数',
+    r'第3章 集合论',
+    r'第4章 整数和有理数',
+    r'第5章 实数',
+    r'第6章 序列的极限',
+    r'第7章 级数',
+    r'第8章 无限集',
+    r'第9章 R上的连续函数',
+    r'第10章 函数的微分',
+    r'第11章 黎曼积分',
+    r'第12章 度量空间',
+    r'第13章 度量空间上的连续函数',
+    r'第14章 一致收敛',
+    r'第15章 幂级数',
+    r'第16章 傅里叶级数',
+    r'第17章 多元微分学',
+    r'第18章 勒贝格测度',
+    r'第19章 勒贝格积分'
+]
 
 
 # 实分析笔记用这个快速转换跳转超链接
@@ -97,19 +122,7 @@ def make_summary():
     _readme_path = os.path.join(_project_dir, 'README.md')
     _summary_path = os.path.join(_project_dir, 'SUMMARY.md')
     # 章节名字,以后记得补充
-    _section_name = [
-        r'第1章   引言',
-        r'第2章   从头开始：自然数',
-        r'第3章   集合论',
-        r'第4章   整数和有理数',
-        r'第5章   实数',
-        r'第6章   序列的极限',
-        r'第7章   级数',
-        r'第8章   无限集',
-        r'第9章   $\mathbb R$上的连续函数',
-        r'第10章   函数的微分',
-        r'第11章   黎曼积分'
-    ]
+    global SECTION_NAME
     # 判断README中说的写到的位置
     with open(_readme_path, 'r', encoding='utf-8') as _f:
         _progress = re.search(r'笔记到(\d{1,2}\.\d{1,2})节，习题到(\d{1,2}.\d{1,2})节', _f.read())
@@ -121,7 +134,7 @@ def make_summary():
     _pattern1 = re.compile(r'实分析 (\d{1,2}\.\d{1,2} .*?)\.md')
     _pattern2 = re.compile(r'实分析 \d{1,2}\.\d{1,2} .*?\.md')
     for _i in range(_goal[1]):
-        _s += f'\n* {_section_name[_i]}'
+        _s += f'\n* {SECTION_NAME[_i]}'
         _path = os.path.join(_project_dir, f'第{_i+1}章', 'md')
         # 获取目录下方文件名并依据章节号排序
         _file = [_x for _x in os.listdir(_path) if _pattern2.match(_x) is not None]
@@ -193,20 +206,31 @@ def sub_string(file: str,
 
 # 将指定的文件推送到gatsby的文件夹下
 def write_in_gatsby(file: str):
+    global SECTION_NAME
     _file_name = os.path.splitext(os.path.split(file)[1])[0]
-    _pattern = re.compile('(\d{1,2})\.(\d{1,2})')
+    _pattern = re.compile('(\d{1,2})\.(\d{1,2}) (.+?)$')
+
     # 处理frontmatter
     _frontmatter = '---\ntype: "real-analysis"\n'
     _match = _pattern.search(_file_name)
     if _match is not None:
         _chapter = _match.group(1)
         _section = _match.group(2)
+        _name = _match.group(3)
         _index = int(_chapter) * 100 + int(_section)
         _frontmatter += f'slug: "section-{_chapter}-{_section}"\n'
+        _frontmatter += f'title: "{_chapter}.{_section} {_name}"'
         _frontmatter += f'index: {_index}\n'
+        _chapter_name = SECTION_NAME[int(_chapter) - 1]
+        _frontmatter += f'chapter: "{_chapter_name}"\n'
+        _c_index = chr(int(_chapter) + 96)
+        _frontmatter += f'chapter_index: {_c_index}\n'
     elif _file_name == '额外注释':
         _frontmatter += 'slug: "extra"\n'
         _frontmatter += f'index: 10000\n'
+        _frontmatter += f'chapter: "额外注释"\n'
+        _c_index = chr(25 + 96)
+        _frontmatter += f'chapter_index: {_c_index}\n'
     _frontmatter += f'title: "{_file_name}"\n'
     with open('date.json', 'r', encoding='utf-8') as _date:
         _data = json.load(_date)
@@ -215,11 +239,21 @@ def write_in_gatsby(file: str):
     # 处理正文
     with open(file, 'r', encoding='utf-8') as _file:
         _text = _file.read()
+
+    # _dir = r'E:\Gatsby\test-site\blog\real-analysis'
+    #
+    # with open(os.path.join(_dir, f'{_file_name}.md'), 'w', encoding='utf-8') as _goal:
+    #     _goal.write(_text)
+
     _text = _text.replace(r'\\', r'\\\\')       # 先转换换行符
-    _text = _text.replace(r'\#', r'\\#')        # 数学公式中使用的#也要转换
+    _text = _text.replace(r'\#', r'\\#')        # 数学公式中使用的#与*也要转换
+    _text = _text.replace(r'*', r'\*')          # 数学公式中使用的#也要转换
     _text = _text.replace(r'\{', r'\\{')        # 数学公式中使用的{和}也要转换
     _text = _text.replace(r'\}', r'\\}')
+    _text = _text.replace(r'\;', r'\\;')        # 几种空格
+    _text = _text.replace(r'\:', r'\\:')
     _text = _text.replace(r'\$', r'\\$')        # 原本使用了转义的$也要额外添加转义
+    _text = _text.replace(r'[toc]', "```toc\n```")          # 使用插件生成toc
 
     def _repo(_match):
         _new = _match.group(1)
@@ -231,23 +265,42 @@ def write_in_gatsby(file: str):
 
     _text = re.sub(r'\(\.\.[\\/]\.\.[\\/].+?\\.+?\\(.+?)\)', _repo, _text)      # 处理跳转url
     _text = re.sub(r'__(.+?)__', r'**\1**', _text)
+
     # _text = re.sub(r'\$([^\n]+?)\$', r' $\1$ ', _text)
+    # _text = re.sub(r'^(#{1,6} .*?)$', r'\1 {\1}', _text, flags=re.M)
     _text = _text.replace('_', r'\_')
+
+    # 合并，然后写入到文件夹
     _main = _frontmatter + _text
-    _dir = r'E:\Gatsby\test-site\blog\real-analysis'
+    _dir = r'E:\Gatsby\personal-site\markdown\real-analysis\file'
+
     with open(os.path.join(_dir, f'{_file_name}.md'), 'w', encoding='utf-8') as _goal:
         _goal.write(_main)
 
+    # 如果有图片也一并迁移过去
+    _img_source = os.path.join(os.path.dirname(os.path.dirname(file)), 'img')
+    _img_dir = os.path.join(os.path.dirname(_dir), 'img')
+    if os.path.isdir(_img_source):
+        if not os.path.isdir(_img_dir):
+            os.mkdir(_img_dir)
+        for _image in os.listdir(_img_source):
+            _source = os.path.join(_img_source, _image)
+            _destination = os.path.join(_img_dir, _image)
+            shutil.copy(_source, _destination)
+    print(f'成功将 {_file_name} 内容写入gatsby网站的文件夹')
+
 
 # 临时函数，需要时可以用一下
-def draft():
+def draft(path):
     pass
 
 
 if __name__ == '__main__':
-    p = r'E:\学习\导出文件汇总\Typora\笔记\实分析\第1章\md\实分析 1.2 为什么要做分析.md'
-    map_file(write_in_gatsby)
-    # func = partial(sub_string, old=r'\exist', new=r'\exists')
+    p = r'E:\学习\导出文件汇总\Typora\笔记\实分析\第10章\md\实分析 10.1 基本定义.md'
+    # print(draft(p))
+    # map_file(write_in_gatsby)
+    # write_in_gatsby(p)
+    # func = partial(sub_string, old=r'__(.+?)__', new=r'**\1**', use_re=True)
     # map_file(func)
     # md2pdf(p)
     # get_url(p)
