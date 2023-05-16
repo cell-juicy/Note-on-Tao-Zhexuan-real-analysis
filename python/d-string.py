@@ -219,7 +219,7 @@ def write_in_gatsby(file: str):
         _name = _match.group(3)
         _index = int(_chapter) * 100 + int(_section)
         _frontmatter += f'slug: "section-{_chapter}-{_section}"\n'
-        _frontmatter += f'title: "{_chapter}.{_section} {_name}"'
+        _frontmatter += f'name: "{_chapter}.{_section} {_name}"\n'
         _frontmatter += f'index: {_index}\n'
         _chapter_name = SECTION_NAME[int(_chapter) - 1]
         _frontmatter += f'chapter: "{_chapter_name}"\n'
@@ -227,8 +227,9 @@ def write_in_gatsby(file: str):
         _frontmatter += f'chapter_index: {_c_index}\n'
     elif _file_name == '额外注释':
         _frontmatter += 'slug: "extra"\n'
-        _frontmatter += f'index: 10000\n'
-        _frontmatter += f'chapter: "额外注释"\n'
+        _frontmatter += 'name: "额外注释"\n'
+        _frontmatter += 'index: 10000\n'
+        _frontmatter += 'chapter: "额外注释"\n'
         _c_index = chr(25 + 96)
         _frontmatter += f'chapter_index: {_c_index}\n'
     _frontmatter += f'title: "{_file_name}"\n'
@@ -240,14 +241,13 @@ def write_in_gatsby(file: str):
     with open(file, 'r', encoding='utf-8') as _file:
         _text = _file.read()
 
-    # _dir = r'E:\Gatsby\test-site\blog\real-analysis'
-    #
-    # with open(os.path.join(_dir, f'{_file_name}.md'), 'w', encoding='utf-8') as _goal:
-    #     _goal.write(_text)
+    _dir = r'E:\Gatsby\personal-site\static\datafile\real-analysis'
+    # 写到用于下载的数据文件夹
+    with open(os.path.join(_dir, f'{_file_name}.md'), 'w', encoding='utf-8') as _goal:
+        _goal.write(_text)
 
     _text = _text.replace(r'\\', r'\\\\')       # 先转换换行符
-    _text = _text.replace(r'\#', r'\\#')        # 数学公式中使用的#与*也要转换
-    _text = _text.replace(r'*', r'\*')          # 数学公式中使用的#也要转换
+    _text = _text.replace(r'\#', r'\\#')        # 数学公式中使用的#也要转换
     _text = _text.replace(r'\{', r'\\{')        # 数学公式中使用的{和}也要转换
     _text = _text.replace(r'\}', r'\\}')
     _text = _text.replace(r'\;', r'\\;')        # 几种空格
@@ -264,7 +264,6 @@ def write_in_gatsby(file: str):
             return f'(../section-{_result[1]}-{_result[2]})'
 
     _text = re.sub(r'\(\.\.[\\/]\.\.[\\/].+?\\.+?\\(.+?)\)', _repo, _text)      # 处理跳转url
-    _text = re.sub(r'__(.+?)__', r'**\1**', _text)
 
     # _text = re.sub(r'\$([^\n]+?)\$', r' $\1$ ', _text)
     # _text = re.sub(r'^(#{1,6} .*?)$', r'\1 {\1}', _text, flags=re.M)
@@ -298,7 +297,7 @@ def draft(path):
 if __name__ == '__main__':
     p = r'E:\学习\导出文件汇总\Typora\笔记\实分析\第10章\md\实分析 10.1 基本定义.md'
     # print(draft(p))
-    # map_file(write_in_gatsby)
+    map_file(write_in_gatsby)
     # write_in_gatsby(p)
     # func = partial(sub_string, old=r'__(.+?)__', new=r'**\1**', use_re=True)
     # map_file(func)
