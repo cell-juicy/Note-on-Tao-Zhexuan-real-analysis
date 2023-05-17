@@ -9,7 +9,7 @@ If you need to preview online, I have deployed a static web document on Gatsby:t
 
 I would also like to thank my collaborator: [@Homological-algebra](https://github.com/Homological-algebra), who also provided a lot of help in completing this note. For answers to the exercises, there is also a very good resource from a big brother's own site, which can be consulted if you are interested: [Analysis [Tenrece Tao] (3rd Ed)](https://christangdt.home.blog/analysis/analysis-tenrece-tao -3rd-ed/):heart:.
 
-The progress is currently updated with notes up to section 10.1 and exercises up to section 10.1. :flushed:.
+The progress is currently updated with notes up to section 10.2 and exercises up to section 10.1. :flushed:.
 
 ---
 
@@ -23,4 +23,4 @@ The progress is currently updated with notes up to section 10.1 and exercises up
 
 同时在这里我要感谢我的合作者：[@Homological-algebra](https://github.com/Homological-algebra)，他也为本篇笔记的完成提供了很多帮助。关于习题答案的话，还有一个大佬自己站点的资料也非常不错，如果有兴趣也可以前往参考：[Analysis [Tenrece Tao] (3rd Ed)](https://christangdt.home.blog/analysis/analysis-tenrece-tao-3rd-ed/):heart:。
 
-目前更新进度，笔记到10.1节，习题到10.1节。:flushed:
+目前更新进度，笔记到10.2节，习题到10.1节。:flushed:
