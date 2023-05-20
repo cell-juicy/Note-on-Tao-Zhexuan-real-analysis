@@ -246,14 +246,23 @@ def write_in_gatsby(file: str):
     with open(os.path.join(_dir, f'{_file_name}.md'), 'w', encoding='utf-8') as _goal:
         _goal.write(_text)
 
-    _text = _text.replace(r'\\', r'\\\\')       # 先转换换行符
-    _text = _text.replace(r'\#', r'\\#')        # 数学公式中使用的#也要转换
-    _text = _text.replace(r'\{', r'\\{')        # 数学公式中使用的{和}也要转换
-    _text = _text.replace(r'\}', r'\\}')
-    _text = _text.replace(r'\;', r'\\;')        # 几种空格
-    _text = _text.replace(r'\:', r'\\:')
-    _text = _text.replace(r'\$', r'\\$')        # 原本使用了转义的$也要额外添加转义
-    _text = _text.replace(r'[toc]', "```toc\n```")          # 使用插件生成toc
+    _text = _text.replace(r'[toc]', "```toc\n```")  # 使用插件生成toc
+
+    def _process_math_block(_match) -> str:
+        _replaced = _match.group(0)
+        _replaced = _replaced.replace(r'*', r'\*')
+        _replaced = _replaced.replace(r'\\', r'\\\\')  # 先转换换行符
+        _replaced = _replaced.replace(r'\#', r'\\#')  # 数学公式中使用的#也要转换
+        _replaced = _replaced.replace(r'\{', r'\\{')  # 数学公式中使用的{和}也要转换
+        _replaced = _replaced.replace(r'\}', r'\\}')
+        _replaced = _replaced.replace(r'\;', r'\\;')  # 几种空格
+        _replaced = _replaced.replace(r'\:', r'\\:')
+        _replaced = _replaced.replace(r'\$', r'\\$')  # 原本使用了转义的$也要额外添加转义
+        _replaced = _replaced.replace(r'\verb|\|', r'\textbackslash ')
+        return _replaced
+
+    _text = re.sub(r'(?<!\\)\$([\s\S]*?)(?<!\\)\$', _process_math_block, _text)
+    _text = re.sub(r'(?<!\\)\${2}([\s\S]*?)(?<!\\)\${2}', _process_math_block, _text)
 
     def _repo(_match):
         _new = _match.group(1)
@@ -295,12 +304,12 @@ def draft(path):
 
 
 if __name__ == '__main__':
-    p = r'E:\学习\导出文件汇总\Typora\笔记\实分析\第10章\md\实分析 10.1 基本定义.md'
+    p = r'E:\学习\导出文件汇总\Typora\笔记\实分析\第8章\md\实分析 8.5 有序集.md'
     # print(draft(p))
-    map_file(write_in_gatsby)
+    # map_file(write_in_gatsby)
     # write_in_gatsby(p)
     # func = partial(sub_string, old=r'__(.+?)__', new=r'**\1**', use_re=True)
     # map_file(func)
-    # md2pdf(p)
+    md2pdf(p)
     # get_url(p)
     # make_summary()
