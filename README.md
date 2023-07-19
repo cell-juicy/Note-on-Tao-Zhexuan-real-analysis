@@ -7,9 +7,12 @@ If you need to preview online, I have deployed a static web document on Gatsby:t
 
 > * Introduction page: <https://cellpersonalsite.netlify.app/note/real-analysis/>
 
-I would also like to thank my collaborator: [@Homological-algebra](https://github.com/Homological-algebra), who also provided a lot of help in completing this note. For answers to the exercises, there is also a very good resource from a big brother's own site, which can be consulted if you are interested: [Analysis [Tenrece Tao] (3rd Ed)](https://christangdt.home.blog/analysis/analysis-tenrece-tao-3rd-ed/):heart:.
+I would also like to thank my collaborator, [@Homological-algebra](https://github.com/Homological-algebra), who also provided a lot of help in completing this note. As for the answers to the exercises, there are also some very good materials on the Big Brother's own site, so if you are interested, you can also go there for reference:
 
-The progress is currently updated with notes up to section 11.3 and exercises up to section 11.3 :flushed:.
+> 1. English version of the answers to the exercises: [Analysis [Tenrece Tao] (3rd Ed)](https://christangdt.home.blog/analysis/analysis-tenrece-tao-3rd-ed/):heart:
+> 2. Chinese version of the answers to the exercises: [陶哲轩实分析（中文第一版）解答](https://alg1lc.home.blog/t-tao_analysis_solution-index/?frame-):heart:
+
+Currently updating progress, notes to section 11.10, exercises to section 11.10. :flushed:
 
 ---
 
@@ -21,6 +24,9 @@ The progress is currently updated with notes up to section 11.3 and exercises up
 
 > * 介绍页：<https://cellpersonalsite.netlify.app/note/real-analysis/>
 
-同时在这里我要感谢我的合作者：[@Homological-algebra](https://github.com/Homological-algebra)，他也为本篇笔记的完成提供了很多帮助。关于习题答案的话，还有一个大佬自己站点的资料也非常不错，如果有兴趣也可以前往参考：[Analysis [Tenrece Tao] (3rd Ed)](https://christangdt.home.blog/analysis/analysis-tenrece-tao-3rd-ed/):heart:。
+同时在这里我要感谢我的合作者：[@Homological-algebra](https://github.com/Homological-algebra)，他也为本篇笔记的完成提供了很多帮助。关于习题答案的话，还有一些大佬自己站点的资料也非常不错，如果有兴趣也可以前往参考：
 
-目前更新进度，笔记到11.3节，习题到11.3节。:flushed:
+> 1. 英文版习题解答：[Analysis [Tenrece Tao] (3rd Ed)](https://christangdt.home.blog/analysis/analysis-tenrece-tao-3rd-ed/):heart:
+> 2. 中文版习题解答：[陶哲轩实分析（中文第一版）解答](https://alg1lc.home.blog/t-tao_analysis_solution-index/?frame-):heart:
+
+目前更新进度，笔记到11.10节，习题到11.10节。:flushed:
