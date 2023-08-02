@@ -12,7 +12,7 @@ I would also like to thank my collaborator, [@Homological-algebra](https://githu
 > 1. English version of the answers to the exercises: [Analysis [Tenrece Tao] (3rd Ed)](https://christangdt.home.blog/analysis/analysis-tenrece-tao-3rd-ed/):heart:
 > 2. Chinese version of the answers to the exercises: [陶哲轩实分析（中文第一版）解答](https://alg1lc.home.blog/t-tao_analysis_solution-index/?frame-):heart:
 
-Currently updating progress, notes to section 11.10, exercises to section 11.10. :flushed:
+Currently updating progress, notes to section 12.4, exercises to section 12.4. :flushed:
 
 ---
 
@@ -29,4 +29,4 @@ Currently updating progress, notes to section 11.10, exercises to section 11.10.
 > 1. 英文版习题解答：[Analysis [Tenrece Tao] (3rd Ed)](https://christangdt.home.blog/analysis/analysis-tenrece-tao-3rd-ed/):heart:
 > 2. 中文版习题解答：[陶哲轩实分析（中文第一版）解答](https://alg1lc.home.blog/t-tao_analysis_solution-index/?frame-):heart:
 
-目前更新进度，笔记到11.10节，习题到11.10节。:flushed:
+目前更新进度，笔记到12.4节，习题到12.4节。:flushed:
