@@ -1,9 +1,9 @@
 # Notes-on-Tenrece-Tao-Real-Analysis
-Here are my notes on [*Tao Zhexuan Real Analysis(part 1)*](https://cellpersonalsite.gatsbyjs.io/resourcefile/book/Analysis-II-(Terence-Tao)-part-1.pdf) and [*Tao Zhexuan Real Analysis(part 2)*](https://cellpersonalsite.gatsbyjs.io/resourcefile/book/Analysis-II-(Terence-Tao)-part-2.pdf) some personal notes, not regularly updated, I will only provide Chinese md documents. Since GitHub has poor support for markdown syntax, you can choose to preview the pdf file to see what the document originally looked like. If you have any questions or think there are errors in it, you can contact me to discuss. :innocent:.
+Here are my notes on [*Tao Zhexuan Real Analysis(part 1)*](https://cellpersonalsite.gatsbyjs.io/resourcefile/book/Analysis-II-(Terence-Tao)-part-1.pdf) and [*Tao Zhexuan Real Analysis(part 2)*](https://cellpersonalsite.gatsbyjs.io/resourcefile/book/Analysis-II-(Terence-Tao)-part-2.pdf) some personal notes, not regularly updated, I will only provide Chinese md documents. Since GitHub has poor support for markdown syntax, you can choose to preview the pdf file to see what the document originally looked like. If you have any questions or think there are errors in it, you can contact me to discuss. :innocent:
 
 Also, the documentation is edited using `Typora`, some of the interlinear formulas and colors can no longer be displayed in `GitHub`, you can download the documentation and view it in `Typora`. The project provides a zip download of the whole folder, please don't move the file relative to the location (some notes need to be jumped).
 
-If you need to preview online, I have deployed a static web document on Gatsby:tada:, please note that due to some force majeure factors in the middle of the markdown to pdf conversion, the actual effect of the static web page may have some differences with the original markdown:weary: (there may also be some unexpected unnoticed errors on the web page:joy:), the actual content of the pdf in this library If you have feedback, you can find my email address in the [About page](https://cellpersonalsite.netlify.app/about/) of the website. Here is the transmission link to the website:innocent::
+If you need to preview online, I have deployed a static web document on Gatsby:tada:, please note that due to some force majeure factors in the middle of the markdown to pdf conversion, the actual effect of the static web page may have some differences with the original markdown:weary: (there may also be some unexpected unnoticed errors on the web page:joy:), the actual content of the pdf in this library If you have feedback, you can find my email address in the [About page](https://cellpersonalsite.netlify.app/about/) of the website. Here is the transmission link to the website:innocent: ：
 
 > * Introduction page: <https://cellpersonalsite.netlify.app/note/real-analysis/>
 
@@ -29,4 +29,4 @@ Currently updating progress, notes to section 16.1, exercises to section 15.7. :
 > 1. 英文版习题解答：[Analysis [Tenrece Tao] (3rd Ed)](https://christangdt.home.blog/analysis/analysis-tenrece-tao-3rd-ed/):heart:
 > 2. 中文版习题解答：[陶哲轩实分析（中文第一版）解答](https://alg1lc.home.blog/t-tao_analysis_solution-index/?frame-):heart:
 
-目前更新进度，笔记到16.1节，习题到15.7节。:flushed:
+目前更新进度，笔记到17.1节，习题到16.5节。:flushed:
