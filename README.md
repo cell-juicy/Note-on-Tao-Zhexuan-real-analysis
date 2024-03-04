@@ -12,7 +12,7 @@ I would also like to thank my collaborator, [@Homological-algebra](https://githu
 > 1. English version of the answers to the exercises: [Analysis [Tenrece Tao] (3rd Ed)](https://christangdt.home.blog/analysis/analysis-tenrece-tao-3rd-ed/):heart:
 > 2. Chinese version of the answers to the exercises: [陶哲轩实分析（中文第一版）解答](https://alg1lc.home.blog/t-tao_analysis_solution-index/?frame-):heart:
 
-Currently updating progress, notes to section 16.1, exercises to section 15.7. :flushed:
+Currently updating progress, notes to section 17.8, exercises to section 17.8. :flushed:
 
 ---
 
@@ -20,7 +20,7 @@ Currently updating progress, notes to section 16.1, exercises to section 15.7. :
 
 另外，文档使用`Typora`编辑，部分行间公式与颜色不能再`GitHub`中显示，您可以下载文档后在`Typora`中查看。项目提供整个文件夹的压缩包下载，请不要乱动文件相对位置（有些笔记跳转需要）。
 
-如果您需要在线预览的话，本人现在Gatsby上部署了静态的网页文档:tada:，请注意，由于中间的一些markdown转为pdf的不可抗力因素，可能静态网页的实际效果同markdown原文有一些差别:weary:（也可能在网页上出现一些意外的未曾注意到的错误:joy:），实际内容以本库中pdf文档为标准，如果您有反馈的意见也可以在该网站的[关于页面](https://cellpersonalsite.netlify.app/about/)找到我的电子邮箱。下面是网站的传送连接:innocent:：
+如果您需要在线预览的话，本人现在Gatsby上部署了静态的网页文档:tada:，请注意，由于中间的一些markdown转为pdf的不可抗力因素，可能静态网页的实际效果同markdown原文有一些差别:weary:（也可能在网页上出现一些意外的未曾注意到的错误:joy:），实际内容以本库中pdf文档为标准，如果您有反馈的意见也可以在该网站的[关于页面](https://cellpersonalsite.netlify.app/about/)找到我的电子邮箱。下面是网站的传送连接:innocent: ：
 
 > * 介绍页：<https://cellpersonalsite.netlify.app/note/real-analysis/>
 
@@ -29,4 +29,4 @@ Currently updating progress, notes to section 16.1, exercises to section 15.7. :
 > 1. 英文版习题解答：[Analysis [Tenrece Tao] (3rd Ed)](https://christangdt.home.blog/analysis/analysis-tenrece-tao-3rd-ed/):heart:
 > 2. 中文版习题解答：[陶哲轩实分析（中文第一版）解答](https://alg1lc.home.blog/t-tao_analysis_solution-index/?frame-):heart:
 
-目前更新进度，笔记到17.1节，习题到16.5节。:flushed:
+目前更新进度，笔记到17.8节，习题到17.8节。:flushed:
