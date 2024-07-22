@@ -1,18 +1,18 @@
 # Notes-on-Tenrece-Tao-Real-Analysis
-Here are my notes on [*Tao Zhexuan Real Analysis(part 1)*](https://cellpersonalsite.gatsbyjs.io/resourcefile/book/Analysis-II-(Terence-Tao)-part-1.pdf) and [*Tao Zhexuan Real Analysis(part 2)*](https://cellpersonalsite.gatsbyjs.io/resourcefile/book/Analysis-II-(Terence-Tao)-part-2.pdf) some personal notes, not regularly updated, I will only provide Chinese md documents. Since GitHub has poor support for markdown syntax, you can choose to preview the pdf file to see what the document originally looked like. If you have any questions or think there are errors in it, you can contact me to discuss. :innocent:
+Here are some of my personal notes on [“Tao Zhexuan Real Analysis (3rd Edition)”](https://cellpersonalsite.gatsbyjs.io/resourcefile/book/实分析(3rd Edition).pdf), which will be updated from time to time, and I will only provide Chinese md documents. Due to GitHub's poor support for markdown syntax, you can choose to preview the pdf file to see what the document originally looks like. If you have any questions or think there are errors, you can contact me to discuss. :innocent.
 
-Also, the documentation is edited using `Typora`, some of the interlinear formulas and colors can no longer be displayed in `GitHub`, you can download the documentation and view it in `Typora`. The project provides a zip download of the whole folder, please don't move the file relative to the location (some notes need to be jumped).
+Also, the document is edited using `Typora`, some of the line formulas and colors can no longer be displayed in `GitHub`, you can download the document and view it in `Typora`. The project provides the whole folder as a zip file, please don't mess with the relative positions of the files (some notes need to be jumped).
 
-If you need to preview online, I have deployed a static web document on Gatsby:tada:, please note that due to some force majeure factors in the middle of the markdown to pdf conversion, the actual effect of the static web page may have some differences with the original markdown:weary: (there may also be some unexpected unnoticed errors on the web page:joy:), the actual content of the pdf in this library If you have feedback, you can find my email address in the [About page](https://cellpersonalsite.netlify.app/about/) of the website. Here is the transmission link to the website:innocent: ：
+If you need to preview online, I have deployed a static webpage on Gatsby :tada:, please note that due to some force majeure factors in the middle of some markdown to pdf conversion, the actual effect of the static webpage may have some differences with the original markdown :weary: (there may also be some accidental and unnoticed errors on the webpage : joy:), the actual content to this library in pdf document as the standard, if you have feedback can also be found in the site's [about page](https://cellpersonalsite.netlify.app/about/) to find my e-mail. Here is the transmission link to the website:innocent::
 
-> * Introduction page: <https://cellpersonalsite.netlify.app/note/real-analysis/>
+> *Introduction page: <https://cellpersonalsite.netlify.app/note/real-analysis/>
 
-I would also like to thank my collaborator, [@Homological-algebra](https://github.com/Homological-algebra), who also provided a lot of help in completing this note. As for the answers to the exercises, there are also some very good materials on the Big Brother's own site, so if you are interested, you can also go there for reference:
+I would also like to thank my collaborator: [@Homological-algebra](https://github.com/Homological-algebra), who also helped a lot in the completion of this note. As for the answers to the exercises, there are also some very good materials on the Big Brother's own site, so if you are interested, you can also go there for reference:
 
-> 1. English version of the answers to the exercises: [Analysis [Tenrece Tao] (3rd Ed)](https://christangdt.home.blog/analysis/analysis-tenrece-tao-3rd-ed/):heart:
-> 2. Chinese version of the answers to the exercises: [陶哲轩实分析（中文第一版）解答](https://alg1lc.home.blog/t-tao_analysis_solution-index/?frame-):heart:
+> 1. 英文版习题解答:[Analysis [Tenrece Tao] (3rd Ed)](https://christangdt.home.blog/analysis/analysis-tenrece-tao-3rd-ed/):heart:
+> 2. 中文版习题解答：[Analysis [Tenrece Tao] (3rd Ed)](https://alg1lc.home.blog/t-tao_analysis_solution-index/?frame-):heart: [陶哲轩实分析(中文第一版)解答]:heart.
 
-Currently updating progress, notes to section 18.5, exercises to section 18.5. :flushed:
+It has been updated, and we may consider adding summaries and appendices in the future. :flushed:
 
 ---
 
@@ -29,4 +29,4 @@ Currently updating progress, notes to section 18.5, exercises to section 18.5. :
 > 1. 英文版习题解答：[Analysis [Tenrece Tao] (3rd Ed)](https://christangdt.home.blog/analysis/analysis-tenrece-tao-3rd-ed/):heart:
 > 2. 中文版习题解答：[陶哲轩实分析（中文第一版）解答](https://alg1lc.home.blog/t-tao_analysis_solution-index/?frame-):heart:
 
-目前更新进度，笔记到18.5节，习题到18.5节。:flushed:
+目前已经更新完毕，以后可能会考虑补充总结和附录的内容。:flushed:
