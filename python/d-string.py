@@ -6,7 +6,6 @@ from typing import Callable, Union
 from functools import partial
 import json
 import datetime
-import markdown
 import shutil
 
 
@@ -241,7 +240,7 @@ def write_in_gatsby(file: str):
     with open(file, 'r', encoding='utf-8') as _file:
         _text = _file.read()
 
-    _dir = r'E:\Gatsby\personal-site\static\datafile\real-analysis'
+    _dir = r'D:\Study\personal-site\static\datafile\real-analysis'
     # 写到用于下载的数据文件夹
     with open(os.path.join(_dir, f'{_file_name}.md'), 'w', encoding='utf-8') as _goal:
         _goal.write(_text)
@@ -258,7 +257,7 @@ def write_in_gatsby(file: str):
         _replaced = _replaced.replace(r'\;', r'\\;')  # 几种空格
         _replaced = _replaced.replace(r'\:', r'\\:')
         _replaced = _replaced.replace(r'\$', r'\\$')  # 原本使用了转义的$也要额外添加转义
-        _replaced = _replaced.replace(r'\verb|\|', r'\textbackslash ')
+        _replaced = _replaced.replace(r'\verb|\|', r'\backslash ')
         return _replaced
 
     _text = re.sub(r'(?<!\\)\$([\s\S]*?)(?<!\\)\$', _process_math_block, _text)
@@ -280,7 +279,7 @@ def write_in_gatsby(file: str):
 
     # 合并，然后写入到文件夹
     _main = _frontmatter + _text
-    _dir = r'E:\Gatsby\personal-site\markdown\real-analysis\file'
+    _dir = r'D:\Study\personal-site\markdown\real-analysis\file'
 
     with open(os.path.join(_dir, f'{_file_name}.md'), 'w', encoding='utf-8') as _goal:
         _goal.write(_main)
@@ -304,12 +303,13 @@ def draft(path):
 
 
 if __name__ == '__main__':
-    p = r'E:\学习\导出文件汇总\Typora\笔记\实分析\第8章\md\实分析 8.5 有序集.md'
+    p = r'D:\Study\note\实分析\额外注释\md\额外注释.md'
+    # get_url(p)
+    md2pdf(p)
+    # make_summary()
     # print(draft(p))
     # map_file(write_in_gatsby)
     # write_in_gatsby(p)
-    # func = partial(sub_string, old=r'__(.+?)__', new=r'**\1**', use_re=True)
+    # func = partial(sub_string, old=r'\lim\inf', new=r'\liminf', use_re=False)
     # map_file(func)
-    md2pdf(p)
-    # get_url(p)
-    # make_summary()
+
